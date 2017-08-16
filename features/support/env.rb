@@ -7,6 +7,8 @@ require 'site_prism'
 require 'pry'
 require 'active_support/inflector'
 require 'rspec'
+require 'yaml'
+
 # require_relative '../../lib/page_objects/page/base/*.rb'
 
 PLATFORM = ENV['PLATFORM'] || 'mobile'
@@ -18,6 +20,7 @@ else
 end
 
 require_all 'lib/helpers'
+require_all 'lib/domain'
 
 Before do
   if (PLATFORM == 'desktop')
@@ -41,3 +44,4 @@ Before do
 
 end
 World(Capybara::DSL)
+

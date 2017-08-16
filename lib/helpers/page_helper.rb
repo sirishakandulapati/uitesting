@@ -2,6 +2,8 @@
   define_method(page_name) {page_name.capitalize.constantize.new}
 end
 
+
+
 # def home
 #   @home ||= Base::Home.new
 # end

@@ -10,11 +10,12 @@ When(/^I login$/) do
   #   login.email.set "pl_ppe3@mailinator.com"
   #   login.password.set "1q2w3e4r"
 
+
   login.signin_button.click
 end
 
 
 Then(/^I should see the signout link$/) do
-  expect(home.has_signout_button).to eql(true)
+  expect(home.header.utility_bar.has_signout_button).to eql(true)
 end
 

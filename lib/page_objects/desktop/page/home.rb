@@ -4,10 +4,6 @@ class Home < SitePrism::Page
   element :signin_button, ".signin-register--signin-button a"
   element :sign_out_button, ".utility-header--logout-button"
 
-  def has_signout_button
-    has_sign_out_button?
-  end
-
-
+  section :header, Header, '#header-wrapper'
 end
 
